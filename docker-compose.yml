@@ -1,7 +1,5 @@
 version: '3'
 
-networks:
-
 services:
   portainer:
     image: portainer/portainer:1.23.0

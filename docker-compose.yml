@@ -1,29 +1,8 @@
 version: '3'
 
 networks:
-  web:
-  database:
 
 services:
-  jenkins:
-    image: jenkinsci/blueocean:1.21.0
-    container_name: jenkins-livraria
-    volumes:
-      - /var/jenkins_home:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock
-    ports:
-      - 9090:8080
-      - 5000:5000
-      - 50000:50000
-  mysql:
-    image: mysql:5.7
-    container_name: mysql-livraria
-    environment:
-      MYSQL_ROOT_PASSWORD: "123456"
-    ports:
-      - 3300:3306
-    networks:
-      - database
   portainer:
     image: portainer/portainer:1.23.0
     container_name: portainer-livraria
